@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- ======================================================================= -->
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+</style>
+<!-- ======================================================================= -->
+
+<!-- Start : Google Analytics Code -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64069893-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-64069893-6');
+</script>
+<!-- End : Google Analytics Code -->
+
+<script type="text/javascript" src="./resources/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+
+<body>
+      <br>
+      <center><span style="font-size:44px;font-weight:bold;">PanoNet3D: Combining Semantic and Geometric Understanding for LiDARPoint Cloud Detection</span></center><br/>
+      <table align=center width=800px>
+      <tr>
+        <td align=center width=150px>
+        <center><span style="font-size:22px"><a href="https://www.linkedin.com/in/stanley-chen/" target="_blank">Xia Chen</a></span></center></td>
+        <td align=center width=150px>
+        <center><span style="font-size:22px"><a href="https://jianrenw.github.io/" target="_blank">Jianren Wang</a></span></center></td>
+        <td align=center width=150px>
+        <center><span style="font-size:22px"><a href="https://davheld.github.io/" target="_blank">David Held</a></span></center></td>
+        <td align=center width=150px>
+        <center><span style="font-size:22px"><a href="http://www.cs.cmu.edu/~hebert/" target="_blank">Martial Hebert</a></span></center></td>
+      <tr/>
+      <tr>
+        <td align=center width=200px>
+        <center><span style="font-size:18px">CMU</span></center></td>
+        <td align=center width=200px>
+        <center><span style="font-size:18px">CMU</span></center></td>
+        <td align=center width=200px>
+        <center><span style="font-size:18px">CMU</span></center></td>
+        <td align=center width=200px>
+        <center><span style="font-size:18px">CMU</span></center></td>
+      <tr/>
+      </table>
+      <table align=center width=700px>
+          <tr>
+            <td align=center width=700px><center><span style="font-size:22px"><a href="http://3dv2020.dgcv.nii.ac.jp/">3DV 2020</a></span></center></td>
+          <tr/>
+      </table>
+      <table align=center width=700px>
+          <tr>
+            <td align=center width=200px><center><span style="font-size:22px"><a href='https://arxiv.org/pdf/2012.09418.pdf'>[Download Paper]</a></span></center></td>
+            <td align=center width=200px><center><span style="font-size:22px"><a href='https://github.com/stooloveu/Det3D'>[GitHub Code]</a></span></center></td>
+            <td align=center width=200px><center><span style="font-size:22px"><a href=''>[Slides]</a></span></center></td>
+            <td align=center width=200px><center><span style="font-size:22px"><a href=''>[Poster]</a></span></center></td>
+          <tr/>
+      </table><br/>
+
+      <!-- <table align=center width=300px>
+      <tr><td align=center width=300px>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Bt67D-6-_d0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </td></tr>
+      </table> -->
+      <br><hr>
+
+      <div style="width:800px; margin:0 auto; text-align=center">
+        Visual data in autonomous driving perception, such as camera image and LiDAR point cloud, can be interpreted as a mixture of two aspects: semantic feature and geometric structure. Semantics come from the appearance and context of objects to the sensor, while geometric structure is the actual 3D shape of point clouds. Most detectors on LiDAR point clouds focus only on analyzing the geometric structure of objects in real 3D space. Unlike previous works, we propose to learn both semantic feature and geometric structure via a unified multi-view framework. Our method exploits the nature of LiDAR scans -- 2D range images, and applies well-studied 2D convolutions to extract semantic features. By fusing semantic and geometric features, our method outperforms state-of-the-art approaches in all categories by a large margin. The methodology of combining semantic and geometric features provides a unique perspective of looking at the problems in real-world 3D point cloud detection. 
+      </div>
+      <br><hr>
+
+      <center><h1>PanoNet3D Architecture</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=center">
+        PanoNet3D's framework for point cloud detection]{PanoNet3D's framework for point cloud detection. The top branch takes LiDAR point cloud as input and decorates raw point features with several simple local geometric features. The lower branch converts point cloud to pseudo range image and feeds it into a 2D FCN to get per-pixel deep semantic feature. The output features of these two branches are then aggregated and passed to the main detector. A final bounding box head generates detected proposals on the BEV plane.
+      </div><br/>
+      <table align=center width=650px>
+        <p style="margin-top:4px;"></p>
+        <tr><td width=500px>
+          <center><a href="./resources/panonet3d.png"><img src = "./resources/panonet3d.png" width=700px></img></a><br></center>
+        </td></tr>
+      </table>
+      <br/><hr>
+      
+      <table align=center width=850px>
+        <center><h1>Paper and Bibtex</h1></center>
+        <tr>
+        <td width=250px align=left>
+        <!-- <p style="margin-top:4px;"></p> -->
+        <a href=''><img class="layered-paper-big" style="height:150px" src="./resources/paper_shot.JPG"/></a>
+        </td>
+        <td width=50px align=center>
+        </td>
+        <td width=550px align=left>
+        <!-- <p style="margin-top:4px;"></p> -->
+        <p style="text-align:left;"><b><span style="font-size:20pt">Citation</span></b><br/><span style="font-size:6px;">&nbsp;<br/></span> <span style="font-size:15pt">Jianren Wang, Yujie Lu, Hang Zhao.<br/> <b>CLOUD: Contrastive Learning of Unsupervised Dynamics<br/></b> In <i>CORL</i> 2020.</span></p>
+        <!-- <p style="margin-top:20px;"></p> -->
+        <span style="font-size:20pt"><a shape="rect" href="javascript:togglebib('panonet3d_bib')" class="togglebib">[Bibtex]</a></span>
+        <span style="font-size:20pt"><a href=''>[Paper]</a></span>
+        <span style="font-size:20pt"><a href='https://arxiv.org/pdf/2012.09418.pdf'>[ArXiv]</a></span>
+        </td>
+        </tr>
+        <tr>
+        <td width=250px align=left>
+        </td>
+        <td width=50px align=center>
+        </td>
+        <td width=550px align=left>
+          <div class="paper" id="alignnet_bib">
+<pre xml:space="preserve">
+@inproceedings{xia20panonet3d,
+    Author = {Chen, Xia and Wang, Jianren and Held, David and Hebert, Martial},
+    Title = {PanoNet3D: Combining Semantic and Geometric Understanding
+    for LiDARPoint Cloud Detection},
+    Booktitle = {3DV},
+    Year = {2020}
+}</pre>
+          </div>
+          </td>
+          </tr>
+      </table>
+    <br><hr>
+
+    <table align=center width=800px>
+      <tr><td width=800px><left>
+      <center><h1>Acknowledgements</h1></center>
+      We would like to thank members of the CMU Center for Perceptual Computing and Learning for fruitful discussions. This work was supported by PanGU Young Investigator Award to JW.<br>
+      </left></td></tr>
+    </table>
+  <br><br>
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+</body>
+</html>
